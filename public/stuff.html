@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ReDiscover</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Nobile" rel="stylesheet">
+    <link href="cover.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="myjs.js"></script>
+  </head>
+  <body>
+    <div class="site-wrapper">
+      <div class="site-wrapper-inner">
+        <div class="cover-container">
+          <h1>ReDiscover</h1>
+          <button type="button" class="btn btn-primary btn-lg buttonss" data-toggle="modal" data-target="#pNameModal">Name the playlist</button>
+          <div class="modal" id="pNameModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-body">
+                  Playlist Name<br>
+                  <input id="playlistName" type="text" name="PlaylistName" value="ReDiscover" placeholder="ReDiscover">
+                </div>
+              </div>
+            </div>
+          </div>
+          <br><br>
+          <button type="button" class="btn btn-primary btn-lg buttonss"  data-toggle="modal" data-target="#happinessModal">Playlist Happiness</button>
+          <div class="modal" id="happinessModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-body">
+                  <div class="row">
+                    Playlist Happiness<br><br>
+                    <input class="col-sm-12" id="targetValence" type="range" name="Valence" min=".25" max=".9" step=".01" value=".57"><br>
+                    <img id="simba" class="gifs col-xs-6" src="../images/cry.gif" alt="">
+                    <img id="sloth" class="gifs col-xs-6" src="../images/slothy_smile.gif" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br><br>
+          <button type="button" class="btn btn-primary btn-lg buttonss"  data-toggle="modal" data-target="#energyModal">Playlist Energy</button>
+          <div class="modal" id="energyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-body">
+                  <div class="row">
+                    Playlist Energy<br><br>
+                    <input class="col-sm-12" id="targetEnergy" type="range" name="Energy" min=".25" max=".9" step=".01" value=".57"><br>
+                    <img id="no_energy" class="gifs col-xs-6" src="../images/no_energy.gif" alt="">
+                    <img id="hyped" class="gifs col-xs-6" src="../images/hyped.gif" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br><br>
+          <button type="button" class="btn btn-primary btn-lg buttonss"  data-toggle="modal" data-target="#danceModal">Playlist Danceability</button>
+          <div class="modal" id="danceModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-body">
+                  <div class="row">
+                    Playlist Danceability<br><br>
+                    <input class="col-sm-12" id="targetDanceability" type="range" name="Danceability" value=".57" min=".25" max=".9" step=".01"><br>
+                    <img id="cat" class="gifs col-xs-6" src="../images/no_dance.gif" alt="">
+                    <img id="babies" class="gifs col-xs-6" src="../images/hit_that_jive.gif" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br><br>
+          <button type="button" class="btn btn-primary btn-lg buttonss"  data-toggle="modal" data-target="#songCountModal">Set the number of songs</button>
+          <div class="modal" id="songCountModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog modal-sm" role="document">
+              <div class="modal-content">
+                <div class="modal-body">
+                  <div class="row text-center">
+                    Song Count<br><br>
+                    <input class="col-sm-4 col-sm-offset-4" id="songCount" type="number" name="SongCount" min="1" max="100" step="1" value="20"><br>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br><br>
+          <!-- <button id="checkNames" type="button" name="button">Check the names big dog</button> -->
+          <button id="clickMeNow" type="button" class="btn btn-default">ReDiscover!</button>
+          <div class="hidden" id="topArtists">
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
