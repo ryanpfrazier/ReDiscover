@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ReDiscover Web Player</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/player.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="../cover.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="bigContainer" class="container">
+      <div id="webPlayerHolder">
+        <iframe id="webPlayer" src="https://embed.spotify.com/?uri=spotify:user:ryanfrazier:playlist:5YmiMBQxQh8luBbwp1uIcH" frameborder="0" allowtransparency="true"></iframe>
+        <br>
+        <a href="stuff.html" class="btn btn-primary btn-lg">Back to playlist maker</a>
+      </div>
+    </div>
+  </body>
+  <footer id="footer">
+      <div id="innerFooter">
+        <div id="leftFooter" class="container">
+          <div class="row">
+            <br>
+            <p id="footerText" class="text-muted col-sm-2">Share on social media!</p>
+            <div class="col-sm-8"></div>
+            <iframe id="follow" class="col-sm-2" src="https://embed.spotify.com/follow/1/?uri=spotify:user:ryanfrazier&size=detail&theme=dark&show-count=0" width="300" height="56" scrolling="no" frameborder="0" style="overflow:hidden;" allowtransparency="true"></iframe>
+          </div>
+        </div>
+      </div>
+  </footer>
+</html>

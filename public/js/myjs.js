@@ -61,6 +61,7 @@ $('document').ready(function() {
         //   },
         //   success: function(newPlaylist) {
         //     playlistID = newPlaylist.id;
+        //     localStorage.setItem('playlistID', playlistID);
         //   }
         // });
       },

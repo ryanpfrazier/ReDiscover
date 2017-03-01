@@ -3,6 +3,7 @@
   <head>
     <title>ReDiscover</title>
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="cover.css">
     <style type="text/css">
       #login, #loggedin {
         display: block;
@@ -17,10 +18,10 @@
   </head>
 
   <body>
-    <div class="container">
-      <div id="login">
+    <div id="loginParent" class="container">
+      <div id="login" class="jumbotron">
         <h1>ReDiscover</h1>
-        <a href="/login" class="btn btn-primary">Log in with Spotify</a>
+        <a id="loginButton" href="/login" class="btn btn-default btn-lg">Log in with Spotify</a>
       </div>
       <div id="loggedin">
         <div id="user-profile">

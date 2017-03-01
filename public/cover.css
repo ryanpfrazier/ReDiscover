@@ -1,33 +1,37 @@
-/*
- * Globals
- */
-
-/* Links */
 a,
 a:focus,
 a:hover {
   color: #fff;
 }
 
-/* Custom default button */
 .btn-default,
 .btn-default:hover,
 .btn-default:focus {
-  color: #333;
+  color: #333333;
   text-shadow: none; /* Prevent inheritance from `body` */
-  background-color: #fff;
-  border: 1px solid #fff;
+  background:
+    linear-gradient(27deg, #EAEAEA 5px, transparent 5px) 0 5px,
+    linear-gradient(207deg, #EAEAEA 5px, transparent 5px) 10px 0px,
+    linear-gradient(27deg, #DDDDDD 5px, transparent 5px) 0px 10px,
+    linear-gradient(207deg, #DDDDDD 5px, transparent 5px) 10px 5px,
+    linear-gradient(90deg, #E4E4E4 10px, transparent 10px),
+    linear-gradient(#E2E2E2 25%, #E5E5E5 25%, #E5E5E5 50%, transparent 50%, transparent 75%, #DBDBDB 75%, #DBDBDB);
+    background-color: #ECECEC;
+    background-size: 20px 20px;
 }
-
-
-/*
- * Base structure
- */
 
 html,
 body {
   height: 100%;
-  background-color: #14484C;
+  background:
+    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background-color: #131313;
+    background-size: 20px 20px;
   font-family: 'Nobile', sans-serif;
 }
 body {
@@ -53,79 +57,32 @@ body {
   margin-left: auto;
 }
 
-/* Padding for spacing */
 .inner {
   padding: 30px;
 }
-
-
-/*
- * Header
- */
-.masthead-brand {
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.masthead-nav > li {
-  display: inline-block;
-}
-.masthead-nav > li + li {
-  margin-left: 20px;
-}
-.masthead-nav > li > a {
-  padding-right: 0;
-  padding-left: 0;
-  font-size: 16px;
-  font-weight: bold;
-  color: #fff; /* IE8 proofing */
-  color: rgba(255,255,255,.75);
-  border-bottom: 2px solid transparent;
-}
-.masthead-nav > li > a:hover,
-.masthead-nav > li > a:focus {
-  background-color: transparent;
-  border-bottom-color: #a9a9a9;
-  border-bottom-color: rgba(255,255,255,.25);
-}
-.masthead-nav > .active > a,
-.masthead-nav > .active > a:hover,
-.masthead-nav > .active > a:focus {
-  color: #fff;
-  border-bottom-color: #fff;
-}
-
-@media (min-width: 768px) {
-  .masthead-brand {
-    float: left;
-  }
-  .masthead-nav {
-    float: right;
-  }
-}
-
-
-/*
- * Cover
- */
 
 .cover {
   padding: 0 20px;
 }
 .cover .btn-lg {
+  color: #333333;
   padding: 10px 20px;
   font-weight: bold;
+  background:
+    linear-gradient(27deg, #EAEAEA 5px, transparent 5px) 0 5px,
+    linear-gradient(207deg, #EAEAEA 5px, transparent 5px) 10px 0px,
+    linear-gradient(27deg, #DDDDDD 5px, transparent 5px) 0px 10px,
+    linear-gradient(207deg, #DDDDDD 5px, transparent 5px) 10px 5px,
+      linear-gradient(90deg, #E4E4E4 10px, transparent 10px),
+    linear-gradient(#E2E2E2 25%, #E5E5E5 25%, #E5E5E5 50%, transparent 50%, transparent 75%, #DBDBDB 75%, #DBDBDB);
+    background-color: #ECECEC;
+    background-size: 20px 20px;
 }
 
-
-/*
- * Footer
- */
-
 #footer {
-  background-color: #0E3033;
-  color: #fff;
-  position: absolute;
+  background-color: transparent;
+  color: #CCCCCC;
+  position: fixed;
     height: auto;
     bottom: 0;
     width: 100%;
@@ -143,43 +100,23 @@ body {
   color: #fff;
 }
 
-
-/*
- * Affix and center
- */
-
 @media (min-width: 768px) {
-  /* Pull out the header and footer */
-  .masthead {
-    position: fixed;
-    top: 0;
-  }
-  .mastfoot {
-    position: fixed;
-    bottom: 0;
-  }
-  /* Start the vertical centering */
   .site-wrapper-inner {
     vertical-align: middle;
   }
-  /* Handle the widths */
-  .masthead,
-  .mastfoot,
   .cover-container {
     width: 100%; /* Must be percentage or pixels for horizontal alignment */
   }
 }
 
 @media (min-width: 992px) {
-  .masthead,
-  .mastfoot,
   .cover-container {
     width: 700px;
   }
 }
 
 input {
-  color: #0E3033;
+  color: #CCCCCC;
 }
 
 .modal-body {
@@ -194,8 +131,16 @@ input {
 
 .buttonss {
   width: 300px;
-  background-color: #081A1C;
-  border-color: #081A1C;
+  color: #333333;
+  background:
+    linear-gradient(27deg, #EAEAEA 5px, transparent 5px) 0 5px,
+    linear-gradient(207deg, #EAEAEA 5px, transparent 5px) 10px 0px,
+    linear-gradient(27deg, #DDDDDD 5px, transparent 5px) 0px 10px,
+    linear-gradient(207deg, #DDDDDD 5px, transparent 5px) 10px 5px,
+      linear-gradient(90deg, #E4E4E4 10px, transparent 10px),
+    linear-gradient(#E2E2E2 25%, #E5E5E5 25%, #E5E5E5 50%, transparent 50%, transparent 75%, #DBDBDB 75%, #DBDBDB);
+    background-color: #ECECEC;
+    background-size: 20px 20px;
 }
 
 #simba {
@@ -227,11 +172,89 @@ input {
   position: relative;
   float: right;
 }
-
+#loginButton {
+  color: #333333;
+  background:
+    linear-gradient(27deg, #EAEAEA 5px, transparent 5px) 0 5px,
+    linear-gradient(207deg, #EAEAEA 5px, transparent 5px) 10px 0px,
+    linear-gradient(27deg, #DDDDDD 5px, transparent 5px) 0px 10px,
+    linear-gradient(207deg, #DDDDDD 5px, transparent 5px) 10px 5px,
+      linear-gradient(90deg, #E4E4E4 10px, transparent 10px),
+    linear-gradient(#E2E2E2 25%, #E5E5E5 25%, #E5E5E5 50%, transparent 50%, transparent 75%, #DBDBDB 75%, #DBDBDB);
+    background-color: #ECECEC;
+    background-size: 20px 20px;
+}
 .modal-content {
-  background-color: #15484C;
+  color: #333333;
+  background:
+    linear-gradient(27deg, #EAEAEA 5px, transparent 5px) 0 5px,
+    linear-gradient(207deg, #EAEAEA 5px, transparent 5px) 10px 0px,
+    linear-gradient(27deg, #DDDDDD 5px, transparent 5px) 0px 10px,
+    linear-gradient(207deg, #DDDDDD 5px, transparent 5px) 10px 5px,
+      linear-gradient(90deg, #E4E4E4 10px, transparent 10px),
+    linear-gradient(#E2E2E2 25%, #E5E5E5 25%, #E5E5E5 50%, transparent 50%, transparent 75%, #DBDBDB 75%, #DBDBDB);
+    background-color: #ECECEC;
+    background-size: 20px 20px;
 }
 
+.modal-body {
+  color: #333333;
+}
 input[type="text"] {
   text-align: center;
+  color: #333333;
+}
+
+input[type="number"] {
+  text-align: center;
+  color: #333333;
+}
+
+#jumbo {
+  background: transparent;
+  font-family: 'Montserrat', sans-serif;
+  font-style: italic;
+  font-weight: bold;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+#titleA {
+  font-family: 'Montserrat', sans-serif;
+  font-style: italic;
+  font-weight: bold;
+}
+
+#follow {
+  margin-bottom: 15px;
+}
+
+#login {
+  background: transparent;
+  font-family: 'Montserrat', sans-serif;
+  font-style: italic;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#bigContainer {
+  height: 100%;
+  width: auto;
+}
+
+#webPlayerHolder {
+  height: 75%;
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+}
+
+#webPlayer {
+  height: 100%;
+  width: 100%;
 }
