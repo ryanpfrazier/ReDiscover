@@ -12,12 +12,11 @@
     <link href="https://fonts.googleapis.com/css?family=Nobile" rel="stylesheet">
     <link href="../cover.css" rel="stylesheet">
   </head>
-  <body class="clear1">
+  <body>
     <div class="site-wrapper">
       <div class="site-wrapper-inner">
         <div class="cover-container">
           <h1 id="titleA">ReDiscover</h1>
-
           <!-- Playlist Name -->
           <button type="button" class="btn btn-default btn-lg buttonss" data-toggle="modal" data-target="#pNameModal">Name the playlist</button>
           <div class="modal" id="pNameModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -41,9 +40,10 @@
                   <div class="row">
                     <h4>Playlist Happiness</h4>
                     <br>
-                    <input class="col-sm-12" id="targetValence" type="range" name="Valence" min=".25" max=".9" step=".01" value=".57"><br>
-                    <img id="simba" class="gifs col-xs-6" src="../images/cry.gif" alt="">
-                    <img id="sloth" class="gifs col-xs-6" src="../images/slothy_smile.gif" alt="">
+                        <input class="col-sm-12" id="targetValence" type="range" name="Valence" min=".25" max=".9" step=".01" value=".57">
+                        <br>
+                        <img id="simba" class="gifs col-xs-6" src="../images/cry.gif" alt="">
+                        <img id="sloth" class="gifs col-xs-6" src="../images/slothy_smile.gif" alt="">
                   </div>
                 </div>
               </div>
@@ -59,7 +59,8 @@
                   <div class="row">
                     <h4>Playlist Energy</h4>
                     <br>
-                    <input class="col-sm-12" id="targetEnergy" type="range" name="Energy" min=".25" max=".9" step=".01" value=".57"><br>
+                    <input class="col-sm-12" id="targetEnergy" type="range" name="Energy" min=".25" max=".9" step=".01" value=".57">
+                    <br>
                     <img id="no_energy" class="gifs col-xs-6" src="../images/no_energy.gif" alt="">
                     <img id="hyped" class="gifs col-xs-6" src="../images/hyped.gif" alt="">
                   </div>
@@ -77,7 +78,8 @@
                   <div class="row">
                     <h4>Playlist Danceability</h4>
                     <br>
-                    <input class="col-sm-12" id="targetDanceability" type="range" name="Danceability" value=".57" min=".25" max=".9" step=".01"><br>
+                    <input class="col-sm-12" id="targetDanceability" type="range" name="Danceability" value=".57" min=".25" max=".9" step=".01">
+                    <br>
                     <img id="cat" class="gifs col-xs-6" src="../images/no_dance.gif" alt="">
                     <img id="babies" class="gifs col-xs-6" src="../images/hit_that_jive.gif" alt="">
                   </div>
@@ -103,7 +105,7 @@
           </div>
           <br><br>
           <button id="clickMeNow" type="button" class="btn btn-default">ReDiscover!</button>
-          <a href="player.html">Go to web player</a>
+          <a id="goToPlayer" href="player.html" class="btn btn-default">Go to web player</a>
         </div>
       </div>
     </div>
@@ -113,9 +115,11 @@
         <div id="leftFooter" class="container">
           <div class="row">
             <br>
-            <p id="footerText" class="text-muted col-sm-2">Share on social media!</p>
-            <div class="col-sm-8"></div>
+            <p id="footerText" class="text-muted col-sm-2">Share on social media</p>
+            <div class="col-sm-3"></div>
             <iframe id="follow" class="col-sm-2" src="https://embed.spotify.com/follow/1/?uri=spotify:user:ryanfrazier&size=detail&theme=dark&show-count=0" width="300" height="56" scrolling="no" frameborder="0" style="overflow:hidden;" allowtransparency="true"></iframe>
+            <div class="col-sm-3"></div>
+            <a id="logout" href="https://www.spotify.com/logout/" class="btn btn-default col-sm-2">Logout</a>
           </div>
         </div>
       </div>

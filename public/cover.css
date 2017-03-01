@@ -22,7 +22,7 @@ a:hover {
 
 html,
 body {
-  height: 100%;
+  height: 94%;
   background:
     linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
     linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
@@ -73,19 +73,27 @@ body {
     linear-gradient(207deg, #EAEAEA 5px, transparent 5px) 10px 0px,
     linear-gradient(27deg, #DDDDDD 5px, transparent 5px) 0px 10px,
     linear-gradient(207deg, #DDDDDD 5px, transparent 5px) 10px 5px,
-      linear-gradient(90deg, #E4E4E4 10px, transparent 10px),
+    linear-gradient(90deg, #E4E4E4 10px, transparent 10px),
     linear-gradient(#E2E2E2 25%, #E5E5E5 25%, #E5E5E5 50%, transparent 50%, transparent 75%, #DBDBDB 75%, #DBDBDB);
     background-color: #ECECEC;
     background-size: 20px 20px;
 }
 
 #footer {
-  background-color: transparent;
   color: #CCCCCC;
-  position: fixed;
+  position: relative;
     height: auto;
     bottom: 0;
     width: 100%;
+  background:
+    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background-color: #131313;
+    background-size: 20px 20px;
 }
 
 .hidden {
@@ -131,60 +139,19 @@ input {
 
 .buttonss {
   width: 300px;
-  color: #333333;
-  background:
-    linear-gradient(27deg, #EAEAEA 5px, transparent 5px) 0 5px,
-    linear-gradient(207deg, #EAEAEA 5px, transparent 5px) 10px 0px,
-    linear-gradient(27deg, #DDDDDD 5px, transparent 5px) 0px 10px,
-    linear-gradient(207deg, #DDDDDD 5px, transparent 5px) 10px 5px,
-      linear-gradient(90deg, #E4E4E4 10px, transparent 10px),
-    linear-gradient(#E2E2E2 25%, #E5E5E5 25%, #E5E5E5 50%, transparent 50%, transparent 75%, #DBDBDB 75%, #DBDBDB);
-    background-color: #ECECEC;
-    background-size: 20px 20px;
 }
 
-#simba {
+#simba, #no_energy, #cat {
   position: relative;
   float: left;
 }
 
-#sloth {
+#sloth, #hyped, #babies {
   position: relative;
   float: right;
 }
 
-#no_energy {
-  position: relative;
-  float: left;
-}
-
-#hyped {
-  position: relative;
-  float: right;
-}
-
-#cat {
-  position: relative;
-  float: left;
-}
-
-#babies {
-  position: relative;
-  float: right;
-}
-#loginButton {
-  color: #333333;
-  background:
-    linear-gradient(27deg, #EAEAEA 5px, transparent 5px) 0 5px,
-    linear-gradient(207deg, #EAEAEA 5px, transparent 5px) 10px 0px,
-    linear-gradient(27deg, #DDDDDD 5px, transparent 5px) 0px 10px,
-    linear-gradient(207deg, #DDDDDD 5px, transparent 5px) 10px 5px,
-      linear-gradient(90deg, #E4E4E4 10px, transparent 10px),
-    linear-gradient(#E2E2E2 25%, #E5E5E5 25%, #E5E5E5 50%, transparent 50%, transparent 75%, #DBDBDB 75%, #DBDBDB);
-    background-color: #ECECEC;
-    background-size: 20px 20px;
-}
-.modal-content {
+#loginButton, .modal-content, .buttonss, #goToPlayer, #logout {
   color: #333333;
   background:
     linear-gradient(27deg, #EAEAEA 5px, transparent 5px) 0 5px,
@@ -200,12 +167,7 @@ input {
 .modal-body {
   color: #333333;
 }
-input[type="text"] {
-  text-align: center;
-  color: #333333;
-}
-
-input[type="number"] {
+input[type="text"], input[type="number"] {
   text-align: center;
   color: #333333;
 }

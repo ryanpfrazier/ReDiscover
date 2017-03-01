@@ -47,23 +47,23 @@ $('document').ready(function() {
       success: function(theUser) {
         userID = theUser.id;
 
-        // $.ajax({
-        //   method: "POST",
-        //   data: JSON.stringify({
-        //     name: playlistName,
-        //     public: false
-        //   }),
-        //   url: `https://api.spotify.com/v1/users/${userID}/playlists`,
-        //   contentType: 'application/json',
-        //   dataType: "json",
-        //   headers: {
-        //     Authorization: `Bearer ${gimmeDatAccessToken}`
-        //   },
-        //   success: function(newPlaylist) {
-        //     playlistID = newPlaylist.id;
-        //     localStorage.setItem('playlistID', playlistID);
-        //   }
-        // });
+        $.ajax({
+          method: "POST",
+          data: JSON.stringify({
+            name: playlistName,
+            public: false
+          }),
+          url: `https://api.spotify.com/v1/users/${userID}/playlists`,
+          contentType: 'application/json',
+          dataType: "json",
+          headers: {
+            Authorization: `Bearer ${gimmeDatAccessToken}`
+          },
+          success: function(newPlaylist) {
+            playlistID = newPlaylist.id;
+            localStorage.setItem('playlistID', playlistID);
+          }
+        });
       },
       error: function() {
         console.log('error');
@@ -97,101 +97,129 @@ $('document').ready(function() {
         console.log('playlistName, valence, energy, dance, songCount..', playlistName, valence, energy, dance, songCount);
 
         // // Get recommendation track uri's and push into array, then push array into object
-        $.ajax({
-          method: "GET",
-          url: `https://api.spotify.com/v1/recommendations?market=US&&limit=${songCount}&seed_artists=${artistString}`,
-          dataType: "json",
-          headers: {
-            Authorization: `Bearer ${gimmeDatAccessToken}`
-          },
-          success: function(data1) {
-            console.log(data1);
-            playlistURI = [];
-            let trackRecommendations = data1.tracks;
+        if (valence === '0.57' && energy === '0.57' && dance === '0.57') {
+          $.ajax({
+            method: "GET",
+            url: `https://api.spotify.com/v1/recommendations?market=US&&limit=${songCount}&seed_artists=${artistString}`,
+            dataType: "json",
+            headers: {
+              Authorization: `Bearer ${gimmeDatAccessToken}`
+            },
+            success: function(data1) {
+              console.log('no vals', data1);
+              playlistURI = [];
+              let trackRecommendations = data1.tracks;
 
-            for (let x in trackRecommendations) {
-              // console.log('trackRecommendations',trackRecommendations[x]);
-              let trackID = trackRecommendations[x].name;
+              for (let x in trackRecommendations) {
+                // console.log('trackRecommendations',trackRecommendations[x]);
+                let trackID = trackRecommendations[x].uri;
 
-              playlistURI.push(trackID);
+                playlistURI.push(trackID);
+              }
+              console.log("playlistURI without targets...", playlistURI);
+
+              tracksToAdd = {
+                uris: playlistURI
+              };
+              console.log('tracksToAdd...', tracksToAdd);
+              $.ajax({
+                method: "POST",
+                url: `https://api.spotify.com/v1/users/${userID}/playlists/${playlistID}/tracks`,
+                contentType: 'application/json',
+                dataType: "json",
+                headers: {
+                  Authorization: `Bearer ${gimmeDatAccessToken}`
+                },
+                data: JSON.stringify(tracksToAdd),
+                success: function(playlist) {
+                  console.log('got this far');
+                  $.ajax({
+                    method: "GET",
+                    url: `https://api.spotify.com/v1/users/${userID}/playlists/${playlistID}`,
+                    dataType: "json",
+                    headers: {
+                      Authorization: `Bearer ${gimmeDatAccessToken}`
+                    },
+                    success: function(finalPlaylist) {
+                      localStorage.setItem('finalPlaylist...', JSON.stringify(finalPlaylist));
+                      window.location = "player.html";
+                    }
+                  });
+                },
+                error: function() {
+                  console.log('error on adding tracks to playlist');
+                }
+              });
+            },
+            error: function() {
+              console.log('error1');
             }
-            console.log("playlistURI without targets...", playlistURI);
-          }
-        });
+          });
 
-        $.ajax({
-          method: "GET",
-          url: `https://api.spotify.com/v1/recommendations?market=US&target_valence=${valence}&target_energy=${energy}&target_danceability=${dance}&limit=${songCount}&seed_artists=${artistString}`,
-          dataType: "json",
-          headers: {
-            Authorization: `Bearer ${gimmeDatAccessToken}`
-          },
-          success: function(data1) {
-            console.log(data1);
-            playlistURI = [];
-            let trackRecommendations = data1.tracks;
+          // console.log(artistString);
+        }
+        else {
+          $.ajax({
+            method: "GET",
+            url: `https://api.spotify.com/v1/recommendations?market=US&target_valence=${valence}&target_energy=${energy}&target_danceability=${dance}&limit=${songCount}&seed_artists=${artistString}`,
+            dataType: "json",
+            headers: {
+              Authorization: `Bearer ${gimmeDatAccessToken}`
+            },
+            success: function(data1) {
+              console.log('vals', data1);
+              playlistURI = [];
+              let trackRecommendations = data1.tracks;
 
-            for (let x in trackRecommendations) {
-              // console.log('trackRecommendations',trackRecommendations[x]);
-              let trackID = trackRecommendations[x].name;
+              for (let x in trackRecommendations) {
+                // console.log('trackRecommendations',trackRecommendations[x]);
+                let trackID = trackRecommendations[x].id;
 
-              playlistURI.push(trackID);
+                playlistURI.push(trackID);
+              }
+              console.log("playlistURI with targets...", playlistURI);
+
+              tracksToAdd = {
+                uris: playlistURI
+              };
+              console.log('tracksToAdd...', tracksToAdd);
+              $.ajax({
+                method: "POST",
+                url: `https://api.spotify.com/v1/users/${userID}/playlists/${playlistID}/tracks`,
+                contentType: 'application/json',
+                dataType: "json",
+                headers: {
+                  Authorization: `Bearer ${gimmeDatAccessToken}`
+                },
+                data: JSON.stringify(tracksToAdd),
+                success: function(playlist) {
+                  $.ajax({
+                    method: "GET",
+                    url: `https://api.spotify.com/v1/users/${userID}/playlists/${playlistID}`,
+                    dataType: "json",
+                    headers: {
+                      Authorization: `Bearer ${gimmeDatAccessToken}`
+                    },
+                    success: function(finalPlaylist) {
+                      localStorage.setItem('finalPlaylist...', JSON.stringify(finalPlaylist));
+                      window.location = "player.html";
+                    }
+                  });
+                },
+                error: function() {
+                  console.log('error on adding tracks to playlist');
+                }
+              });
+            },
+            error: function() {
+              console.log('error1');
             }
-            console.log("playlistURI with targets...", playlistURI);
-          }
-        });
-        //
-        //     // console.log('playlistURI...', playlistURI);
-        //     tracksToAdd = {
-        //       uris: playlistURI
-        //     };
-        //     console.log('tracksToAdd...', tracksToAdd);
-        //     $.ajax({
-        //       method: "POST",
-        //       url: `https://api.spotify.com/v1/users/${userID}/playlists/${playlistID}/tracks`,
-        //       contentType: 'application/json',
-        //       dataType: "json",
-        //       headers: {
-        //         Authorization: `Bearer ${gimmeDatAccessToken}`
-        //       },
-        //       data: JSON.stringify(tracksToAdd),
-        //       success: function(playlist) {
-        //         $.ajax({
-        //           method: "GET",
-        //           url: `https://api.spotify.com/v1/users/${userID}/playlists/${playlistID}`,
-        //           dataType: "json",
-        //           headers: {
-        //             Authorization: `Bearer ${gimmeDatAccessToken}`
-        //           },
-        //           success: function(finalPlaylist) {
-        //             console.log('finalPlaylist...', finalPlaylist);
-        //           }
-        //         });
-        //       },
-        //       error: function() {
-        //         console.log('error on adding tracks to playlist');
-        //       }
-        //     });
-        //   },
-        //   error: function() {
-        //     console.log('error1');
-        //   }
-        // });
-
-        // console.log(artistString);
+          });
+        }
       },
       error: function() {
         console.log('error on first ajax');
       }
     });
-  });
-
-
-  $("#checkNames").on('click', function() {
-    let pName = $('#playlistName').val();
-
-    if (pName) {
-      console.log('perf');
-    }
   });
 });
