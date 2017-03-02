@@ -173,6 +173,7 @@ $('document').ready(function() {
     .then(setURIArray)
     .then(addTracksToPlaylist)
     .then(getPlaylistToSaveToLocalStorage)
-    .then(savePlaylistToLocalStorage);
+    .then(savePlaylistToLocalStorage)
+    .then(window.location = 'player.html');
   });
 });

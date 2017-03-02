@@ -16,9 +16,9 @@
     <div class="site-wrapper">
       <div class="site-wrapper-inner">
         <div class="cover-container">
-          <h1 id="titleA">ReDiscover</h1>
+          <h1 id="titlePage1">Re<img id="headphone" src="../images/headphones.png" alt="">iscover</h1>
           <!-- Playlist Name -->
-          <button type="button" class="btn btn-default btn-lg buttonss" data-toggle="modal" data-target="#pNameModal">Name the playlist</button>
+          <button type="button" class="btn btn-default btn-lg buttonss hvr-radial-out" data-toggle="modal" data-target="#pNameModal">Name the playlist</button>
           <div class="modal" id="pNameModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
@@ -31,15 +31,17 @@
             </div>
           </div>
           <br><br>
-          <button type="button" class="btn btn-default btn-lg buttonss" data-toggle="modal" data-target="#timeFrameModal">Customize Artists</button>
-          <div class="modal" id="timeFrameModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <button type="button" class="btn btn-default btn-lg buttonss hvr-radial-out" data-toggle="modal" data-target="#artistModal">Customize Artists</button>
+          <div class="modal" id="artistModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-body" id="artistArea">
                   <h4>Select Up To Five Artists</h4>
                   <br>
-                  <input type="text" id="artistVal" value="" placeholder="Search for artists">
-                  <button type="button" id="artistSearch" class="btn btn-default btn-lg">Search</button>
+                  <div id="holdThat">
+                    <input type="text" id="artistVal" value="" placeholder="Search for artists">
+                    <button type="button" id="artistSearch" class="btn btn-default btn-lg hvr-radial-out1">Search</button>
+                  </div>
                   <br><br>
                   <div class="container-fluid">
                     <div id="cardHolder" class="row">
@@ -51,7 +53,7 @@
           </div>
           <br><br>
           <!-- Playlist Happiness -->
-          <button type="button" class="btn btn-default btn-lg buttonss"  data-toggle="modal" data-target="#happinessModal">Playlist Happiness</button>
+          <button type="button" class="btn btn-default btn-lg buttonss hvr-radial-out"  data-toggle="modal" data-target="#happinessModal">Playlist Happiness</button>
           <div class="modal" id="happinessModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog modal-lg" role="document">
               <div class="modal-content">
@@ -70,7 +72,7 @@
           </div>
           <br><br>
           <!-- Playlist Energy -->
-          <button type="button" class="btn btn-default btn-lg buttonss"  data-toggle="modal" data-target="#energyModal">Playlist Energy</button>
+          <button type="button" class="btn btn-default btn-lg buttonss hvr-radial-out"  data-toggle="modal" data-target="#energyModal">Playlist Energy</button>
           <div class="modal" id="energyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog modal-lg" role="document">
               <div class="modal-content">
@@ -89,7 +91,7 @@
           </div>
           <br><br>
           <!-- Playlist Danceability -->
-          <button type="button" class="btn btn-default btn-lg buttonss"  data-toggle="modal" data-target="#danceModal">Playlist Danceability</button>
+          <button type="button" class="btn btn-default btn-lg buttonss hvr-radial-out"  data-toggle="modal" data-target="#danceModal">Playlist Danceability</button>
           <div class="modal" id="danceModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog modal-lg" role="document">
               <div class="modal-content">
@@ -108,7 +110,7 @@
           </div>
           <br><br>
           <!-- Song Count -->
-          <button type="button" class="btn btn-default btn-lg buttonss"  data-toggle="modal" data-target="#songCountModal">Set the number of songs</button>
+          <button type="button" class="btn btn-default btn-lg buttonss hvr-radial-out"  data-toggle="modal" data-target="#songCountModal">Set the number of songs</button>
           <div class="modal" id="songCountModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog modal-sm" role="document">
               <div class="modal-content">
@@ -123,10 +125,10 @@
             </div>
           </div>
           <br><br>
-          <button id="clickMeNow" type="button" class="btn btn-default">ReDiscover!</button>
+          <button id="clickMeNow" type="button" class="btn btn-default hvr-radial-out">ReDiscover!</button>
           <br>
           <br>
-          <a id="goToPlayer" href="player.html" class="btn btn-default">Go to web player</a>
+          <a id="goToPlayer" href="player.html" class="btn btn-default hvr-radial-out">Go to web player</a>
         </div>
       </div>
     </div>
@@ -140,7 +142,7 @@
             <div class="col-sm-6" style="text-align: center">
               <iframe id="follow" src="https://embed.spotify.com/follow/1/?uri=spotify:user:ryanfrazier&size=detail&theme=dark&show-count=0" width="300" height="56" scrolling="no" frameborder="0" style="overflow:hidden" allowtransparency="true"></iframe>
             </div>
-            <a id="logout" href="https://www.spotify.com/logout/" class="btn btn-default col-sm-2" style="float: right">Logout</a>
+            <a id="logout" href="https://www.spotify.com/logout/" class="btn btn-default col-sm-2 hvr-radial-out" style="float: right">Logout</a>
           </div>
         </div>
       </div>

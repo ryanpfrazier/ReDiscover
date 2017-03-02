@@ -9,15 +9,15 @@ a:hover {
 .btn-default:focus {
   color: #333333;
   text-shadow: none; /* Prevent inheritance from `body` */
-  background:
-    linear-gradient(27deg, #EAEAEA 5px, transparent 5px) 0 5px,
+  background-color: #DBDBDB;
+    /*linear-gradient(27deg, #EAEAEA 5px, transparent 5px) 0 5px,
     linear-gradient(207deg, #EAEAEA 5px, transparent 5px) 10px 0px,
     linear-gradient(27deg, #DDDDDD 5px, transparent 5px) 0px 10px,
     linear-gradient(207deg, #DDDDDD 5px, transparent 5px) 10px 5px,
     linear-gradient(90deg, #E4E4E4 10px, transparent 10px),
     linear-gradient(#E2E2E2 25%, #E5E5E5 25%, #E5E5E5 50%, transparent 50%, transparent 75%, #DBDBDB 75%, #DBDBDB);
-    background-color: #ECECEC;
-    background-size: 20px 20px;
+    background-color: #DBDBDB;
+    background-size: 20px 20px;*/
 }
 
 html,
@@ -37,20 +37,11 @@ body {
 body {
   color: #fff;
   text-align: center;
-  text-shadow: 0 1px 3px rgba(0,0,0,.9);
+  text-shadow: 0 1px 3px rgba(0,0,0,.6);
 }
 
 #artistSearch, .cardButton, .alert-dumb {
   color: #fff;
-  background:
-    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
-    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
-    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
-    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
-    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
-    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
-    background-color: #131313;
-    background-size: 20px 20px;
 }
 
 .site-wrapper {
@@ -81,15 +72,15 @@ body {
   color: #333333;
   padding: 10px 20px;
   font-weight: bold;
-  background:
-    linear-gradient(27deg, #EAEAEA 5px, transparent 5px) 0 5px,
+  background-color: #DBDBDB;
+    /*linear-gradient(27deg, #EAEAEA 5px, transparent 5px) 0 5px,
     linear-gradient(207deg, #EAEAEA 5px, transparent 5px) 10px 0px,
     linear-gradient(27deg, #DDDDDD 5px, transparent 5px) 0px 10px,
     linear-gradient(207deg, #DDDDDD 5px, transparent 5px) 10px 5px,
     linear-gradient(90deg, #E4E4E4 10px, transparent 10px),
     linear-gradient(#E2E2E2 25%, #E5E5E5 25%, #E5E5E5 50%, transparent 50%, transparent 75%, #DBDBDB 75%, #DBDBDB);
-    background-color: #ECECEC;
-    background-size: 20px 20px;
+    background-color: #DBDBDB;
+    background-size: 20px 20px;*/
 }
 
 #footer {
@@ -132,7 +123,7 @@ body {
 
 @media (min-width: 992px) {
   .cover-container {
-    width: 700px;
+    width: 100%;
   }
 }
 
@@ -168,17 +159,17 @@ input {
   padding-right: 5px;
 }
 
-#loginButton, .modal-content, .buttonss, #goToPlayer, #logout {
+.modal-content, .buttonss {
   color: #333333;
-  background:
-    linear-gradient(27deg, #EAEAEA 5px, transparent 5px) 0 5px,
+  background-color: #DBDBDB;
+    /*linear-gradient(27deg, #EAEAEA 5px, transparent 5px) 0 5px,
     linear-gradient(207deg, #EAEAEA 5px, transparent 5px) 10px 0px,
     linear-gradient(27deg, #DDDDDD 5px, transparent 5px) 0px 10px,
     linear-gradient(207deg, #DDDDDD 5px, transparent 5px) 10px 5px,
-      linear-gradient(90deg, #E4E4E4 10px, transparent 10px),
+    linear-gradient(90deg, #E4E4E4 10px, transparent 10px),
     linear-gradient(#E2E2E2 25%, #E5E5E5 25%, #E5E5E5 50%, transparent 50%, transparent 75%, #DBDBDB 75%, #DBDBDB);
-    background-color: #ECECEC;
-    background-size: 20px 20px;
+    background-color: #DBDBDB;
+    background-size: 20px 20px;*/
 }
 
 .modal-body {
@@ -198,12 +189,6 @@ input[type="text"], input[type="number"] {
   padding-bottom: 0;
 }
 
-#titleA {
-  font-family: 'Montserrat', sans-serif;
-  font-style: italic;
-  font-weight: bold;
-}
-
 #follow {
   margin-bottom: 15px;
   float: left;
@@ -218,6 +203,7 @@ input[type="text"], input[type="number"] {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 100%;
 }
 
 #bigContainer {
@@ -227,20 +213,20 @@ input[type="text"], input[type="number"] {
 
 #webPlayerHolder {
   height: 70%;
-  width: 50%;
+  width: 70%;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -60%);
+  transform: translate(-50%, -70%);
 }
 
-.card, #webPlayer {
+.card, .cardHolder {
   height: 100%;
   width: 100%;
 }
 
-.cardHolder {
-  height: 100%;
+#webPlayer {
+  height: 90%;
   width: 100%;
 }
 
@@ -262,4 +248,151 @@ input[type="text"], input[type="number"] {
 #closeX {
   color: white;
   opacity: 1;
+}
+
+.artistAdded {
+  width: 15%;
+  margin: 3px 3px;
+}
+
+.infoArea {
+  width: 70%;
+  margin: 10px auto;
+}
+
+#tagline {
+  font-size: 3vmin;
+  width: auto;
+}
+
+#description {
+  font-size: 2vmin;
+}
+
+#titlePage {
+  width: auto;
+  font-family: 'Montserrat', sans-serif;
+  font-style: italic;
+  font-weight: bold;
+  letter-spacing: 7px;
+  font-size: 11vmin;
+}
+
+#headphone {
+  height: 13vmin;
+  transform: translate(0, -10%) rotate(90deg);
+  display: inline-block;
+}
+
+#titlePage1 {
+  width: auto;
+  font-family: 'Montserrat', sans-serif;
+  font-style: italic;
+  letter-spacing: 7px;
+  font-size: 11vmin;
+}
+
+#titlePage2 {
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  font-style: italic;
+  letter-spacing: 7px;
+  font-size: 15vmin;
+}
+
+#headphone1 {
+  height: 15vmin;
+  transform: translate(0, -10%) rotate(90deg);
+  display: inline-block;
+}
+
+/* Radial Out */
+.hvr-radial-out {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  overflow: hidden;
+  background: #DBDBDB;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.hvr-radial-out:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #242424;
+  border-radius: 100%;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-radial-out:hover, .hvr-radial-out:focus, .hvr-radial-out:active {
+  color: white;
+}
+.hvr-radial-out:hover:before, .hvr-radial-out:focus:before, .hvr-radial-out:active:before {
+  -webkit-transform: scale(2);
+  transform: scale(2);
+}
+
+.hvr-radial-out1 {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  overflow: hidden;
+  background: #242424;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.hvr-radial-out1:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: silver;
+  border-radius: 100%;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-radial-out1:hover, .hvr-radial-out1:focus, .hvr-radial-out1:active {
+  color: black;
+}
+.hvr-radial-out1:hover:before, .hvr-radial-out1:focus:before, .hvr-radial-out1:active:before {
+  -webkit-transform: scale(2);
+  transform: scale(2);
+}
+
+#holdThat {
+  height: auto;
+}
+
+#artistVal {
+  height: 46px;
 }

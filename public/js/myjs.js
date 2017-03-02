@@ -12,6 +12,17 @@ $('document').ready(function() {
     });
   };
 
+  function allowRediscover() {
+    if (artistIDArray.length === 0) {
+      $('#clickMeNow').hide();
+    }
+    else {
+      $('#clickMeNow').show();
+    }
+  }
+
+  allowRediscover();
+
   // Get AccessToken from Cookies
   function getCookie(cname) {
     let name = `${cname}=`;
@@ -62,8 +73,9 @@ $('document').ready(function() {
       if ((individualArtists.images).length > 0) {
         image = individualArtists.images[0].url;
       }
-      $('#cardHolder').append(`<div class="col-sm-6 cardHeight"><div class="card"><img class="card-img-top cardsImg" src=${image}><button id="${uri}" class="cardButton btn btn-default btn-lg">${artistName}</button></div></div>`);
+      $('#cardHolder').append(`<div class="col-sm-6 cardHeight"><div class="card"><img class="card-img-top cardsImg" src=${image}><button id="${uri}" name="${artistName}" class="cardButton btn btn-default btn-lg hvr-radial-out1">${artistName}</button></div></div>`);
     }
+    allowRediscover();
   }
 
   function alertSameArtist() {
@@ -79,9 +91,11 @@ $('document').ready(function() {
   function alertingUser() {
     if (artistIDArray.length < 5) {
       let artistX = (event.target).id;
+      let artistName = $(event.target).attr('name');
 
       if (artistIDArray.indexOf(artistX) === -1) {
         artistIDArray.push(artistX);
+        $('.site-wrapper-inner').prepend(`<button id=${artistX} class="btn btn-default btn-md buttonss artistAdded hvr-radial-out">${artistName}</button>`);
       }
       else {
         alertSameArtist();
@@ -90,6 +104,7 @@ $('document').ready(function() {
     else {
       alertTooManyArtists();
     }
+    allowRediscover();
   }
 
   // Artists Search and Display
@@ -101,6 +116,15 @@ $('document').ready(function() {
   $('#cardHolder').on('click', '.cardButton', function() {
     $('#danger-alert').remove();
     alertingUser();
+  });
+
+  $('.site-wrapper-inner').on('click', '.artistAdded', function() {
+    let artistID = $(event.target).attr("id");
+    let position = artistIDArray.indexOf(artistID);
+
+    artistIDArray.splice(position);
+    $(event.target).remove();
+    allowRediscover();
   });
 
   $('#clickMeNow').on('click', function() {
@@ -127,7 +151,6 @@ $('document').ready(function() {
 
     function createPlaylist(user) {
       userID = user.id;
-      localStorage.setItem('userID', userID);
 
       return $.ajax({
         method: "POST",
@@ -149,7 +172,6 @@ $('document').ready(function() {
 
     function savePlaylistID(newPlaylist) {
       playlistID = newPlaylist.id;
-      localStorage.setItem('playlistID', playlistID);
     }
 
     function pushArtistsIntoArray(data) {
@@ -224,6 +246,9 @@ $('document').ready(function() {
     }
 
     function savePlaylistToLocalStorage(finalPlaylist) {
+      localStorage.setItem('userID', userID);
+      localStorage.setItem('playlistID', playlistID);
+
       localStorage.setItem('finalPlaylist...', JSON.stringify(finalPlaylist));
     }
 
