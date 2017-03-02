@@ -3,7 +3,7 @@ $(document).ready(function() {
   let userID = localStorage.getItem('userID');
   let finalPlaylist = localStorage.getItem('finalPlaylist...');
 
-  // console.log('finalPlaylist...', JSON.parse(finalPlaylist));
+  console.log('finalPlaylist...', JSON.parse(finalPlaylist));
 
   let webPlayerHolder = $('#webPlayerHolder');
 
