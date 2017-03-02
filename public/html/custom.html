@@ -31,6 +31,25 @@
             </div>
           </div>
           <br><br>
+          <button type="button" class="btn btn-default btn-lg buttonss" data-toggle="modal" data-target="#timeFrameModal">Customize Artists</button>
+          <div class="modal" id="timeFrameModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-body" id="artistArea">
+                  <h4>Select Up To Five Artists</h4>
+                  <br>
+                  <input type="text" id="artistVal" value="" placeholder="Search for artists">
+                  <button type="button" id="artistSearch" class="btn btn-default btn-lg">Search</button>
+                  <br><br>
+                  <div class="container-fluid">
+                    <div id="cardHolder" class="row">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br><br>
           <!-- Playlist Happiness -->
           <button type="button" class="btn btn-default btn-lg buttonss"  data-toggle="modal" data-target="#happinessModal">Playlist Happiness</button>
           <div class="modal" id="happinessModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -40,10 +59,10 @@
                   <div class="row">
                     <h4>Playlist Happiness</h4>
                     <br>
-                        <input class="col-sm-12" id="targetValence" type="range" name="Valence" min=".25" max=".9" step=".01" value=".57">
-                        <br>
-                        <img id="simba" class="gifs col-xs-6" src="../images/cry.gif" alt="">
-                        <img id="sloth" class="gifs col-xs-6" src="../images/slothy_smile.gif" alt="">
+                    <input class="col-sm-12" id="targetValence" type="range" name="Valence" min=".25" max=".9" step=".01" value=".57">
+                    <br>
+                    <img id="simba" class="gifs col-xs-6" src="../images/cry.gif" alt="">
+                    <img id="sloth" class="gifs col-xs-6" src="../images/slothy_smile.gif" alt="">
                   </div>
                 </div>
               </div>
@@ -105,6 +124,8 @@
           </div>
           <br><br>
           <button id="clickMeNow" type="button" class="btn btn-default">ReDiscover!</button>
+          <br>
+          <br>
           <a id="goToPlayer" href="player.html" class="btn btn-default">Go to web player</a>
         </div>
       </div>
@@ -115,11 +136,11 @@
         <div id="leftFooter" class="container">
           <div class="row">
             <br>
-            <p id="footerText" class="text-muted col-sm-2">Share on social media</p>
-            <div class="col-sm-3"></div>
-            <iframe id="follow" class="col-sm-2" src="https://embed.spotify.com/follow/1/?uri=spotify:user:ryanfrazier&size=detail&theme=dark&show-count=0" width="300" height="56" scrolling="no" frameborder="0" style="overflow:hidden;" allowtransparency="true"></iframe>
-            <div class="col-sm-3"></div>
-            <a id="logout" href="https://www.spotify.com/logout/" class="btn btn-default col-sm-2">Logout</a>
+            <!-- <p id="footerText" class="text-muted col-sm-4" style="float: left">Share on social media</p> -->
+            <div class="col-sm-6" style="text-align: center">
+              <iframe id="follow" src="https://embed.spotify.com/follow/1/?uri=spotify:user:ryanfrazier&size=detail&theme=dark&show-count=0" width="300" height="56" scrolling="no" frameborder="0" style="overflow:hidden" allowtransparency="true"></iframe>
+            </div>
+            <a id="logout" href="https://www.spotify.com/logout/" class="btn btn-default col-sm-2" style="float: right">Logout</a>
           </div>
         </div>
       </div>

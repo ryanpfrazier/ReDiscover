@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ReDiscover</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/default.js"></script>
+    <script type="text/javascript" src="../js/extracted_stuff.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Nobile" rel="stylesheet">
+    <link href="../cover.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="site-wrapper">
+      <div class="site-wrapper-inner">
+        <div class="cover-container">
+          <h1 id="titleA">ReDiscover</h1>
+          <!-- Playlist Name -->
+          <button type="button" class="btn btn-default btn-lg buttonss" data-toggle="modal" data-target="#pNameModal">Name the playlist</button>
+          <div class="modal" id="pNameModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-body">
+                  <h4>Playlist Name</h4>
+                  <br>
+                  <input id="playlistName" type="text" name="PlaylistName" value="ReDiscover" placeholder="ReDiscover">
+                </div>
+              </div>
+            </div>
+          </div>
+          <br><br>
+          <!-- Artist Time Frame -->
+          <button type="button" class="btn btn-default btn-lg buttonss" data-toggle="modal" data-target="#timeFrameModal">Time Frame to Get Artist Data</button>
+          <div class="modal" id="timeFrameModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-body">
+                  <h4>Artists Time Range</h4>
+                  <br>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="timeFrame" id="short_term" value="short_term">Top artists from past month
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="timeFrame" id="medium_term" value="medium_term" checked>Top artists from past 6 months
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="timeFrame" id="long_term" value="long_term">Top artists from all time
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br><br>
+          <!-- Song Count -->
+          <button type="button" class="btn btn-default btn-lg buttonss"  data-toggle="modal" data-target="#songCountModal">Set the number of songs</button>
+          <div class="modal" id="songCountModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog modal-sm" role="document">
+              <div class="modal-content">
+                <div class="modal-body">
+                  <div class="row text-center">
+                    <h4>Song Count</h4>
+                    <br>
+                    <input class="col-sm-4 col-sm-offset-4" id="songCount" type="number" name="SongCount" min="1" max="100" step="1" value="20"><br>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br><br>
+          <button id="clickMeNow" type="button" class="btn btn-default">ReDiscover!</button>
+          <br>
+          <br>
+          <a id="goToPlayer" href="player.html" class="btn btn-default">Go to web player</a>
+        </div>
+      </div>
+    </div>
+  </body>
+  <footer id="footer">
+      <div id="innerFooter">
+        <div id="leftFooter" class="container">
+          <div class="row">
+            <br>
+            <!-- <p id="footerText" class="text-muted col-sm-4" style="float: left">Share on social media</p> -->
+            <div class="col-sm-6" style="text-align: center">
+              <iframe id="follow" src="https://embed.spotify.com/follow/1/?uri=spotify:user:ryanfrazier&size=detail&theme=dark&show-count=0" width="300" height="56" scrolling="no" frameborder="0" style="overflow:hidden" allowtransparency="true"></iframe>
+            </div>
+            <a id="logout" href="https://www.spotify.com/logout/" class="btn btn-default col-sm-2" style="float: right">Logout</a>
+          </div>
+        </div>
+      </div>
+  </footer>
+</html>

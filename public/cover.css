@@ -40,6 +40,19 @@ body {
   text-shadow: 0 1px 3px rgba(0,0,0,.9);
 }
 
+#artistSearch, .cardButton, .alert-dumb {
+  color: #fff;
+  background:
+    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background-color: #131313;
+    background-size: 20px 20px;
+}
+
 .site-wrapper {
   display: table;
   width: 100%;
@@ -132,9 +145,11 @@ input {
 }
 
 .gifs {
-  height: 250px;
-  width: 250px;
+  height: 200px;
+  width: 200px;
   border-radius: 50px;
+  padding: 0;
+  margin: 0;
 }
 
 .buttonss {
@@ -144,11 +159,13 @@ input {
 #simba, #no_energy, #cat {
   position: relative;
   float: left;
+  padding-left: 5px;
 }
 
 #sloth, #hyped, #babies {
   position: relative;
   float: right;
+  padding-right: 5px;
 }
 
 #loginButton, .modal-content, .buttonss, #goToPlayer, #logout {
@@ -189,6 +206,7 @@ input[type="text"], input[type="number"] {
 
 #follow {
   margin-bottom: 15px;
+  float: left;
 }
 
 #login {
@@ -208,7 +226,7 @@ input[type="text"], input[type="number"] {
 }
 
 #webPlayerHolder {
-  height: 75%;
+  height: 70%;
   width: 50%;
   position: absolute;
   top: 50%;
@@ -216,7 +234,32 @@ input[type="text"], input[type="number"] {
   transform: translate(-50%, -60%);
 }
 
-#webPlayer {
+.card, #webPlayer {
   height: 100%;
   width: 100%;
+}
+
+.cardHolder {
+  height: 100%;
+  width: 100%;
+}
+
+.cardsImg {
+  height: 254px;
+  width: 100%;
+}
+
+.cardButton {
+  width: 100%;
+  overflow-wrap: normal;
+  overflow: scroll;
+}
+
+.cardHeight {
+  height: 300px;
+}
+
+#closeX {
+  color: white;
+  opacity: 1;
 }
