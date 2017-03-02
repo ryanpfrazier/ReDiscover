@@ -189,7 +189,7 @@ input[type="text"], input[type="number"] {
 
 #webPlayerHolder {
   height: 70%;
-  width: 70%;
+  width: 80%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -255,7 +255,7 @@ input[type="text"], input[type="number"] {
 }
 
 #headphone {
-  height: 13vmin;
+  height: 11vmin;
   transform: translate(0, -10%) rotate(90deg);
   display: inline-block;
 }
