@@ -14,7 +14,7 @@ var cookieParser = require('cookie-parser');
 
 var client_id = 'd066da8f781c4143abecda75f0fdeeab'; // Your client id
 var client_secret = '018763ab63e744daa47564d96974288f'; // Your secret
-var redirect_uri = 'http://localhost:8888/callback'; // Your redirect uri
+var redirect_uri = 'http://ryanpfrazier-rediscover.herokuapp.com/callback'; // Your redirect uri
 
 /**
  * Generates a random string containing numbers and letters
@@ -143,5 +143,9 @@ app.get('/refresh_token', function(req, res) {
   });
 });
 
-console.log('Listening on 8888');
-app.listen(8888);
+const port = process.env.PORT || 8888;
+app.listen(port, () => {
+  console.log('Listening on port', port)
+});
+
+module.exports = app;
