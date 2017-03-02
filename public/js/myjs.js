@@ -128,6 +128,7 @@ $('document').ready(function() {
   });
 
   $('#clickMeNow').on('click', function() {
+    localStorage.clear();
     let artistString = '';
     let playlistName = $('#playlistName').val();
     let valence = $('#targetValence').val();
@@ -252,6 +253,15 @@ $('document').ready(function() {
       localStorage.setItem('finalPlaylist...', JSON.stringify(finalPlaylist));
     }
 
+    function goToWebPlayer() {
+      if (localStorage.length === 3) {
+        window.location = 'player.html';
+      }
+      else {
+        setTimeout(goToWebPlayer(), 100);
+      }
+    }
+
     getCookie("accessToken");
 
     getUserID()
@@ -263,6 +273,6 @@ $('document').ready(function() {
     .then(addTracksToPlaylist)
     .then(getPlaylistToSaveToLocalStorage)
     .then(savePlaylistToLocalStorage)
-    .then(window.location = 'player.html');
+    .then(goToWebPlayer);
   });
 });
