@@ -8,16 +8,8 @@ a:hover {
 .btn-default:hover,
 .btn-default:focus {
   color: #333333;
-  text-shadow: none; /* Prevent inheritance from `body` */
+  text-shadow: none;
   background-color: #DBDBDB;
-    /*linear-gradient(27deg, #EAEAEA 5px, transparent 5px) 0 5px,
-    linear-gradient(207deg, #EAEAEA 5px, transparent 5px) 10px 0px,
-    linear-gradient(27deg, #DDDDDD 5px, transparent 5px) 0px 10px,
-    linear-gradient(207deg, #DDDDDD 5px, transparent 5px) 10px 5px,
-    linear-gradient(90deg, #E4E4E4 10px, transparent 10px),
-    linear-gradient(#E2E2E2 25%, #E5E5E5 25%, #E5E5E5 50%, transparent 50%, transparent 75%, #DBDBDB 75%, #DBDBDB);
-    background-color: #DBDBDB;
-    background-size: 20px 20px;*/
 }
 
 html,
@@ -73,14 +65,6 @@ body {
   padding: 10px 20px;
   font-weight: bold;
   background-color: #DBDBDB;
-    /*linear-gradient(27deg, #EAEAEA 5px, transparent 5px) 0 5px,
-    linear-gradient(207deg, #EAEAEA 5px, transparent 5px) 10px 0px,
-    linear-gradient(27deg, #DDDDDD 5px, transparent 5px) 0px 10px,
-    linear-gradient(207deg, #DDDDDD 5px, transparent 5px) 10px 5px,
-    linear-gradient(90deg, #E4E4E4 10px, transparent 10px),
-    linear-gradient(#E2E2E2 25%, #E5E5E5 25%, #E5E5E5 50%, transparent 50%, transparent 75%, #DBDBDB 75%, #DBDBDB);
-    background-color: #DBDBDB;
-    background-size: 20px 20px;*/
 }
 
 #footer {
@@ -117,7 +101,7 @@ body {
     vertical-align: middle;
   }
   .cover-container {
-    width: 100%; /* Must be percentage or pixels for horizontal alignment */
+    width: 100%;
   }
 }
 
@@ -162,14 +146,6 @@ input {
 .modal-content, .buttonss {
   color: #333333;
   background-color: #DBDBDB;
-    /*linear-gradient(27deg, #EAEAEA 5px, transparent 5px) 0 5px,
-    linear-gradient(207deg, #EAEAEA 5px, transparent 5px) 10px 0px,
-    linear-gradient(27deg, #DDDDDD 5px, transparent 5px) 0px 10px,
-    linear-gradient(207deg, #DDDDDD 5px, transparent 5px) 10px 5px,
-    linear-gradient(90deg, #E4E4E4 10px, transparent 10px),
-    linear-gradient(#E2E2E2 25%, #E5E5E5 25%, #E5E5E5 50%, transparent 50%, transparent 75%, #DBDBDB 75%, #DBDBDB);
-    background-color: #DBDBDB;
-    background-size: 20px 20px;*/
 }
 
 .modal-body {
