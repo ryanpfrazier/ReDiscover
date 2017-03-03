@@ -387,3 +387,7 @@ input[type="text"], input[type="number"] {
   opacity: .85;
   z-index: -1;
 }
+
+#opening {
+  color: white;
+}
