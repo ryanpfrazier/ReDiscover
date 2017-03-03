@@ -3,7 +3,7 @@ An intuitive playlist generator utilizing listening history from Spotify, also f
 
 Check out a walkthrough of the app here: *Coming soon*
 
-The current deployed version is here: http://rediscoverspotify.herokuapp.com/
+The current deployed version is here: http://ryanpfrazier-rediscover.herokuapp.com/
 
 ###Features
 1. The **sign in page** gives a brief description of the app and signs the user in via Spotify's OAuth protocol.
