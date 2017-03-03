@@ -1,9 +1,9 @@
 #ReDiscover
 An intuitive playlist generator utilizing listening history from Spotify, also featuring customizable inputs to create personalized playlists directly to the user's Spotify account.
 
-Check out a walkthrough of our app here: *Coming soon*
+Check out a walkthrough of the app here: *Coming soon*
 
-Our current deployed version is here: http://ryanpfrazier-rediscover.herokuapp.com/
+The current deployed version is here: http://ryanpfrazier-rediscover.herokuapp.com/
 
 ###Features
 1. The **sign in page** gives a brief description of the app and signs the user in via Spotify's OAuth protocol.
