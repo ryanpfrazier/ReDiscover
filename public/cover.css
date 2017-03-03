@@ -372,3 +372,21 @@ input[type="text"], input[type="number"] {
 #artistVal {
   height: 46px;
 }
+
+#theImage {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#theBlack {
+  background-color: black;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: .85;
+}
