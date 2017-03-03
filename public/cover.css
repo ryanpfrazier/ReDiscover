@@ -244,7 +244,6 @@ input[type="text"], input[type="number"] {
   width: auto;
   font-family: 'Montserrat', sans-serif;
   font-style: italic;
-  font-weight: bold;
   letter-spacing: 7px;
   font-size: 11vmin;
 }
