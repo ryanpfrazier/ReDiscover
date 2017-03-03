@@ -221,9 +221,9 @@ input[type="text"], input[type="number"] {
   height: 300px;
 }
 
-#closeX {
+#closeX, .closeX {
   color: black;
-  opacity: 1;
+  opacity: .5;
 }
 
 .artistAdded {
